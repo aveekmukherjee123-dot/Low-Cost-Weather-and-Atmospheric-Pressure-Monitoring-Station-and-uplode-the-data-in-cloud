@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "author": "Weather Station",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-dht22", "id": "dht1", "top": -10, "left": 230, "attrs": { "temperature": "28", "humidity": "65" } },
+    { "type": "board-bmp180", "id": "bmp1", "top": 130, "left": 230, "attrs": { "temperature": "28", "pressure": "101325" } }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "dht1:VCC", "esp:3V3", "red", [] ],
+    [ "dht1:GND", "esp:GND.2", "black", [] ],
+    [ "dht1:SDA", "esp:15", "green", [] ],
+    [ "bmp1:VCC", "esp:3V3", "red", [] ],
+    [ "bmp1:GND", "esp:GND.2", "black", [] ],
+    [ "bmp1:SDA", "esp:21", "blue", [] ],
+    [ "bmp1:SCL", "esp:22", "orange", [] ]
+  ],
+  "dependencies": {}
+}
