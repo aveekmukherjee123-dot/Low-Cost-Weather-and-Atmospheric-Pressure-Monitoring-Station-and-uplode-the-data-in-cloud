@@ -1,6 +1,7 @@
 # Low-Cost Weather & Atmospheric Pressure Monitoring Station
 
 An IoT weather station built on an **ESP32**, a **DHT22** (temperature + humidity) and a **BMP180** (barometric pressure + altitude). Readings are uploaded to the **Blynk IoT Cloud** every few seconds and shown on a live dashboard. The whole project runs in the **Wokwi** simulator, so no hardware is needed, and it ports directly to a real ESP32.
+My wowki prject link -(https://wokwi.com/projects/479051908635722753).
 
 ## Features
 - Temperature and humidity (DHT22)
@@ -52,6 +53,7 @@ BMP180 ──(I2C 21/22)──────┘
 4. Click the DHT22 and BMP180 in the diagram and move the sliders (temperature, humidity, pressure) and watch the Blynk dashboard update.
 
 > The BMP180 part type in Wokwi is `board-bmp180` (pins: VCC, 3.3V, GND, SCL, SDA). Click the sensors during simulation to change temperature, humidity and pressure.
+> 
 
 ## Sample serial output
 ```
